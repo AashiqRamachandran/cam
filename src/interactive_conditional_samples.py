@@ -28,7 +28,7 @@ def postt(message, idom):
     time.sleep(2)
 
 def twitter_search(keywords):
-    search = tweepy.Cursor(api.search, q=keywords, result_type="recent", lang="en").items()
+    search = tweepy.Cursor(api.search, q=keywords, result_type="recent", lang="en").items(1)
     with open("data.csv","w") as file:
         writer = csv.writer(file)    
         writer.writerow(["user id", "tweeted text", "replied text", "sentiment polarity", "sentiment objectivity"])
