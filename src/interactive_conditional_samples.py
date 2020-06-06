@@ -37,7 +37,7 @@ def twitter_search(keywords):
             screen_name=item.user.screen_name
             reply=fire.Fire(interact_model(item.text))
             link="https://bit.ly/2Y7Liew"
-            message="@%s I think " %(screen_name) + str(reply)+str(link)
+            message="@%s I think " %(screen_name) + str(reply)+ str(link)
             postt(message, item.id)
             sentiment_overall=TextBlob(item.text)            
             print(sentiment_overall.sentiment)
