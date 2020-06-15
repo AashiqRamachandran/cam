@@ -9,7 +9,7 @@ import tweepy
 import time
 from textblob import TextBlob
 import csv
-
+import re
 
 import model, sample, encoder
 
@@ -36,6 +36,7 @@ def twitter_search(keywords):
             #tweet_data=item.text
             screen_name=item.user.screen_name
             reply=fire.Fire(interact_model(item.text))
+            final_reply = re.sub(r"http\S+", "", reply)
             link=" Check out https://bit.ly/2UcUNrp"
             message="@%s I think " %(screen_name) + str(reply)+ str(link)
             postt(message, item.id)
