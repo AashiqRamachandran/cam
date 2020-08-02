@@ -1,6 +1,7 @@
 git clone https://github.com/openai/gpt-2.git && cd gpt-2
 pip3 install fire
 pip3 install tensorflow==1.14.0
+
 pip3 install -r requirements.txt
 sed -i 's/top_k=0/top_k=40/g' src/interactive_conditional_samples.py
 
