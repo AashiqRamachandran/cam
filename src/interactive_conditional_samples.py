@@ -14,9 +14,13 @@ import re
 import model, sample, encoder
 
 #twitter consumer tokens being defined here
-auth = tweepy.OAuthHandler("IUK4LzRRBjNZSPse0Yrh0ASzs", "R7wgP61StMDNKtSN71hWTj7ROjIa15m8643bfm9Cy8XsUG6BSR")
+#IUK4LzRRBjNZSPse0Yrh0ASzs
+#R7wgP61StMDNKtSN71hWTj7ROjIa15m8643bfm9Cy8XsUG6BSR
+auth = tweepy.OAuthHandler("SGMkyomaXPvKM3B6fLyuTw3Dn", "aIa7YzrL3znFDFuVOB9E9wCFoQM873VHDYrqU9uPVZFm34HvwO")
 #twitter access tokens being defined here
-auth.set_access_token("1226323598144458754-gAWJFxK7fzoioaPomxaUS7PemHhDIl", "MtMZOPHtFyTmAu14zwRRrgJNUZx8gDZUuItwXIz8VFMHv")
+#1226323598144458754-gAWJFxK7fzoioaPomxaUS7PemHhDIl
+#MtMZOPHtFyTmAu14zwRRrgJNUZx8gDZUuItwXIz8VFMHv
+auth.set_access_token("1226323598144458754-ap3KOIhezEXRj6wdw2L6cvdEw8N8Ij", "wWOhdDNarsrOkaayQHC95WGipvHf5axSTSu9jwGHjS8Po")
 #twitter api call being set here
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
